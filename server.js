@@ -91,7 +91,7 @@ app.post('/api/markers', (req, res) => {
     res.status(201).json(newMarker);
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`✅ Сервер запущен: http://localhost:${PORT}`);
     console.log(`👑 Владелец ID: ${OWNER_ID}`);
